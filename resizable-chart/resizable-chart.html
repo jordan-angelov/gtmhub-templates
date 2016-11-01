@@ -1,0 +1,37 @@
+<!-- Chart area -->
+<div id="chart-320"></div>
+
+<script>
+setTimeout(function() {
+  var data = google.visualization.arrayToDataTable([
+    ['City', '2010 Population',],
+    ['New York City, NY', 8175000],
+    ['Los Angeles, CA', 3792000],
+    ['Chicago, IL', 2695000],
+    ['Houston, TX', 2099000],
+    ['Philadelphia, PA', 1526000]
+  ]);
+
+  var options = {
+    title: 'Population of Largest U.S. Cities',
+    // width: 500,
+    // height: 300,
+    width: $("#chart-320").parents(".widget-template").eq(0).width(),
+    height: $("#chart-320").parents(".widget-template").eq(0).height(),
+    hAxis: {
+      title: 'Total Population',
+      minValue: 0
+    },
+    animation: false,
+    vAxis: {
+      title: 'City'
+    }
+  };
+
+  var chart = new google.visualization.BarChart(document.getElementById('chart-320'));
+
+  chart.draw(data, options);
+
+
+}, 50)
+</script>
