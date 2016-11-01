@@ -1,0 +1,20 @@
+name: uxmetrics
+title: UX Metrics
+description: UX Metrics
+fields:
+  -
+    name: name
+    title: User name
+    type: string
+  -
+    name: completion
+    title: Completion
+    type: integer
+  -
+    name: time
+    title: Completion time
+    type: double
+  -
+    name: task
+    title: Task
+    type: string
